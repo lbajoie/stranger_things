@@ -1,5 +1,10 @@
 import React from "react";
 
 export const Dummy = () => {
-    return(<h1>Dummy</h1>
+    return(<div>
+        <h2>Help him</h2>
+        <p>Please!!!,</p>
+           <p> Thankyou....
+        </p>
+        </div>
 )}; 
