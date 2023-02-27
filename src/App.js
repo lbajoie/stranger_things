@@ -3,15 +3,27 @@ import './App.css';
 //import { Dummy } from './components/Dummy';
 import { Footer } from './components/Footer';
 import  {Posts}  from './API';
+import {Create} from './API';
+import {NewUserForm} from './components/NewUserForm';
+import {Login} from './components/Login'
 
 function App() {
   return (
     <div className='container'>
-      <Header />
+      <Header />  
+    <div class='row'>
+      <div class='col'>
       <Posts />
-      {/* <Dummy /> */}
+      <aside class='col'>
+        <Create />
+      </aside>
+      
+    </div>
+      <NewUserForm /> 
+      <Login />
       <Footer />
     </div>
+  </div>
   );
 }
 
