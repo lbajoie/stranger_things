@@ -28,15 +28,17 @@ export default function Login({setToken}) {
           .catch(console.error);
     }                
     return (
-        <form onSubmit={(event) => loginUser(event)}>
-            <label>Username:</label>
+        <form id="login" onSubmit={(event) => loginUser(event)}>
+           
             <input
+              placeholder="Username"
               type="text"
               value={newUsername}
               onChange={(event) => setNewUsername(event.target[0])}
               ></input>
-            <label>Password:</label>
+            
               <input
+              placeholder="Password"
                type="password"
                value={newPassword}
                onChange={(event) => setNewPassword(event.target[1])}

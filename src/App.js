@@ -1,29 +1,27 @@
 import { Header } from './components/Header';
 import './App.css';
 //import { Dummy } from './components/Dummy';
-import { Footer } from './components/Footer';
-import  {Posts}  from './API';
-import {Create} from './API';
+//import { Footer } from './components/Footer';
+import  {Posts}  from './components/Posts';
 import {NewUserForm} from './components/NewUserForm';
+import {Create} from './components/Createpost';
+
 import {Login} from './components/Login'
 
 function App() {
   return (
     <div className='container'>
       <Header />  
-    <div class='row'>
-      <div class='col'>
       <Posts />
-      <aside class='col'>
-        <Create />
-      </aside>
       
+       <Login /> 
+       <NewUserForm />
+      <Create />
+      
+   
+   
     </div>
-      <NewUserForm /> 
-      <Login />
-      <Footer />
-    </div>
-  </div>
+  
   );
 }
 

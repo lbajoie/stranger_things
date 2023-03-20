@@ -24,18 +24,16 @@ import { useState } from "react";
     .catch(console.error);
    }
    return(
-    <form onSubmit={(event) => handleSubmit(event)}>
-      <label>Username:</label>
-        <input type="text"
+    <form id="newUser" onSubmit={(event) => handleSubmit(event)}>
+             <input type="text" placeholder="username"
         value={username}
         onChange={(event) => setUsername(event.target[0])}
         ></input>
-        <label>Password:</label>
           <input type="password"
-          vaule={password}
+          vaule={password} placeholder="password"
           onChange={(event) => setPassword(event.target[1])}
           ></input>
-        <button type="submit">Login</button>
+        <button type="submit">New User</button>
     </form>
    );
 };
