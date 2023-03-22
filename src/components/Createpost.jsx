@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import {BASE_URL} from './API';
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -12,10 +12,11 @@ const Create = () => {
     const handleSubmit = async (event)  => {
         event.preventDefault();
         console.log('title, body: ', title);
-        const response = await fetch('https://strangers-things.herokuapp.com/api/2211-ftb-et-web-pt/posts', {
+        const response = await fetch(`${BASE_URL}posts`, {
            method: 'POST',
            headers: {
-            'Content-type': 'Application/json'
+            'Content-type': 'Application/json',
+            //'Authorization': `Bearer ${token}`
            },
            
             body: JSON.stringify({

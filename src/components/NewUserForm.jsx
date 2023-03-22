@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import {BASE_URL} from './API.js';
 
  function NewUserForm  ({token})  {
   const [username, setUsername] = useState('');
@@ -7,7 +8,7 @@ import { useState } from "react";
   const handleSubmit = async (event) => {
     event.preventDefault();
     
-     fetch('https://strangers-things.herokuapp.com/api/2211-ftb-et-web-pt/users/register',{
+     fetch(`${BASE_URL}users/register`,{
       method:'POST',
       headers:{'Content-Type': 'application/json'
     },

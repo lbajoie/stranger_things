@@ -1,5 +1,5 @@
 import React from 'react';
-// import ReactDOM  from 'react';
+ import ReactDOM  from 'react';
 
 export const Header = () => {
 return (<div id='header'>
