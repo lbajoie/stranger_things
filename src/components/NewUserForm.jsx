@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import {BASE_URL} from './API.js';
+import { BASE_URL } from "../API";
 
  function NewUserForm  ({token})  {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     
@@ -22,7 +23,12 @@ import {BASE_URL} from './API.js';
       .then(result => {
       console.log(result);
     })
-    .catch(console.error);
+    
+    .catch(error => {
+      alert(error)
+      
+         
+        });
    }
    return(
     <form id="newUser" onSubmit={(event) => handleSubmit(event)}>
@@ -34,7 +40,7 @@ import {BASE_URL} from './API.js';
           vaule={password} placeholder="password"
           onChange={(event) => setPassword(event.target[1])}
           ></input>
-        <button type="submit">New User</button>
+        <button type="submit" class="submit-btn" >New User</button>
     </form>
    );
 };

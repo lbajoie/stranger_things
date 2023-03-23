@@ -1,5 +1,4 @@
 import React from 'react';
- import ReactDOM  from 'react';
 
 export const Header = () => {
 return (<div id='header'>
@@ -7,7 +6,3 @@ return (<div id='header'>
 </div>
 )};
 
-// ReactDOM.render(
-//     <Header />,
-//     document.getElementById('root')
-// )

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { BASE_URL } from "../API";
 
 export default function Login({setToken}) {
     const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ export default function Login({setToken}) {
         event.preventDefault();
         console.log('username and password event', event.target[0].value, event.target[1].value)
         
-        fetch('https://strangers-things.herokuapp.com/api/2211-ftb-et-web-pt/users/login',{
+        fetch(`${BASE_URL}users/login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -22,12 +23,12 @@ export default function Login({setToken}) {
                     password: event.target[1].value
                 }     
             })
-        }) 
+        }, []) 
             .then(response => response.json())
           .then(result => {
             console.log('token', result.data.token);
             if ( result.error) {
-           // throw error
+            
              console.log(error)   
             } else {
                 setToken(result.data.token);
@@ -40,7 +41,7 @@ export default function Login({setToken}) {
           })
 
           .catch(error => {
-        
+        alert(error)
             setError('An error occurred while logging in. ');
           });
     }        
@@ -62,6 +63,7 @@ export default function Login({setToken}) {
         }
         if(isLoggedIn()) {
             headers['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
+            
         }
         return headers
     } makeHeaders();
@@ -83,9 +85,9 @@ export default function Login({setToken}) {
                value={password}
                onChange={(event) =>  setPassword(event.target[1])}
               ></input>
-            <button type="submit">Login Submit</button>
+            <button type="submit" class="submit-btn" >Login Submit</button>
         </form>
-        {isLoggedIn() && <button onClick={logOut}>Log Out</button>}
+        <form id="logout" onSubmit={logOut} ><button type="submit" class="submit-btn" >Log Out</button></form>
         </>
     );
     

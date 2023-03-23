@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { BASE_URL } from "../API";
 
 
 export const Posts = () => {
@@ -9,7 +9,7 @@ export const Posts = () => {
     useEffect(() => {
       const fetchPosts = async () => {
    
-      const resp = await fetch('https://strangers-things.herokuapp.com/api/2211-ftb-et-web-pt/posts/');
+      const resp = await fetch(`${BASE_URL}posts/`);
       const data = await resp.json();
       setPosts(data.data.posts);
       console.log('data: ', data.data.posts);
@@ -23,8 +23,14 @@ export const Posts = () => {
       Posts1
   </h1>
   {
-    posts.map(post => <div id="posts" key={post.id}>
-      {post.title}, {post.price}, {post.description}, {post.id}
+    posts.map(post => <div id="posts" key={post._id}>
+      <p><b><i>Title:  </i></b>{post.title}</p>
+      <p><b><i>Description:  </i></b>{post.description}</p>
+      <p><b><i>Location:  </i></b>{post.location}</p>
+      <p><b><i>Price:   </i></b>{post.price}</p>
+        <p><b><i>Post Id:   </i></b>{post._id}</p>
+       
+     
     </div>)
   }
   </>

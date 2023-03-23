@@ -5,18 +5,20 @@ import './App.css';
 import  {Posts}  from './components/Posts';
 import {NewUserForm} from './components/NewUserForm';
 import {Create} from './components/Createpost';
-import { BASE_URL } from './API/index';
+//import { BASE_URL } from './API/index';
 import {Login} from './components/Login'
+import React, { useState } from 'react';
 
 function App() {
+  const [token, setToken] = useState('')
   return (
     <div className='container'>
       <Header />  
       <Posts />
-       <Login /> 
+       <Login setToken={setToken}/> 
        <NewUserForm />
-      <Create />
-      <BASE_URL />
+      <Create token = {token}/>
+     
    
    
     </div>

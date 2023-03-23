@@ -90,8 +90,20 @@ body {
  background-color: rgba(0, 255, 255, 0.36);
   position:fixed;
   border: solid 5px black;
-  padding-bottom:425px;
+  padding-bottom:445px;
  
+  }
+
+  #logout {
+    position: fixed;
+    float: left;
+    margin-left: 73%;
+    margin-top: 9%;
+    
+  }
+
+  .submit-btn {
+    background-color: chartreuse;
   }
 
 #newpost {
@@ -103,6 +115,8 @@ body {
  margin-top: 20%;
   margin-left: 70%;
   position: fixed;
+  text-align: center;
+  color: chartreuse;
 } 
 
 #newUser {
