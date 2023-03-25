@@ -47,8 +47,8 @@
 }
 
 #header {
-  color: purple;
-  background-color: gold;
+  color: blue;
+  background-color: rgba(255, 0, 217, 0.801);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -67,19 +67,21 @@
 }
 */
 body {
-  background-image: url("cory_state_capital.jpg");
-  background-size: 35%;
+  background-image: url("galaxy.jpg");
+  
+  background-size: auto;
   align-items: center;
   color: rgb(2, 2, 87);
 }
 
+
 #posts {
-  color: #000;
+  color: purple;
   margin: 20px;
   display: inline-flexbox;
   flex-direction: column;
   border:solid 2px brown;
-  background-color: aqua;
+  background-color: rgba(0, 255, 115, 0.769);
   width: 60%;
   float: left;
 }
