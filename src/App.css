@@ -76,30 +76,34 @@ body {
 
 
 #posts {
-  color: purple;
+  color: rgb(98, 12, 211);
   margin: 20px;
   display: inline-flexbox;
   flex-direction: column;
-  border:solid 2px brown;
-  background-color: rgba(0, 255, 115, 0.769);
-  width: 60%;
+  border:solid 8px rgb(241, 4, 205);
+  background-color: rgba(0, 252, 97, 0.687);
+  width: 50%;
   float: left;
+  text-align: center;
+  text-decoration:underline rgb(183, 0, 255);
+  text-decoration-style :double;
+  font-size: large;
 }
  #login {
    margin: 0%;
   margin-top: 5%;
+  margin-left: 10%;
   display:inline-table;
  background-color: rgba(0, 255, 255, 0.36);
   position:fixed;
-  border: solid 5px black;
-  padding-bottom:445px;
- 
+  border: solid 6px rgb(230, 8, 237);
+  
   }
 
   #logout {
     position: fixed;
     float: left;
-    margin-left: 73%;
+    margin-left: 75%;
     margin-top: 9%;
     
   }
@@ -109,13 +113,14 @@ body {
   }
 
 #newpost {
-  max-block-size : 220px;
+  min-block-size : 300px;
+  min-width: 350px;
   border: solid 5px fuchsia;
   background-color:  rgba(255, 0, 0, 0.438);
   justify-self:right;
   display: grid;
- margin-top: 20%;
-  margin-left: 70%;
+ margin-top: 17%;
+  margin-left: 66.5%;
   position: fixed;
   text-align: center;
   color: chartreuse;
@@ -123,9 +128,9 @@ body {
 
 #newUser {
   margin: 10px;
-  margin-left: 63%;
+  margin-left: 64%;
   display: table;
-  border: solid 10px green;
+  border: solid 6px rgb(29, 194, 29);
   position: fixed;
   margin-top: 13%;
 }

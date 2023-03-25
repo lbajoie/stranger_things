@@ -40,7 +40,7 @@ import { BASE_URL } from "../API";
           vaule={password} placeholder="password"
           onChange={(event) => setPassword(event.target[1])}
           ></input>
-        <button type="submit" class="submit-btn" >New User</button>
+        <button type="submit" className="submit-btn" >New User</button>
     </form>
    );
 };

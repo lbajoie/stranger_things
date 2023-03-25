@@ -29,9 +29,9 @@ const Create = ({token}) => {
               }
 
            })
-        }, [])
+        }, []);
         const data = await response.json();
-        console.log('data: ',data)
+        //console.log('data: ', data.user.post)
     }
     return <>
   
@@ -53,7 +53,7 @@ const Create = ({token}) => {
           Willing to Deliver ???
         </span>
         
-        <button type="submit" className="btn btn-outline-primary" class="submit-btn">Submit New Post</button>
+        <button type="submit" className="btn btn-outline-primary submit-btn">Submit New Post</button>
     </form>
      
     </>
