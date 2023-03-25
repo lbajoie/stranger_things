@@ -12,12 +12,13 @@ import React, { useState } from 'react';
 
 function App({username, setUserName}) {
   const [token, setToken] = useState('')
+  const [name, setName] = useState('')
   
   return (
     <div className='container'>
       <Header />  
-      <Posts token = {token} username = {username}/>
-      <Login setToken={setToken} username = {username} setUserName = {setUserName}/>
+      <Posts token = {token} username = {username} name = {name} />
+      <Login setToken={setToken} username = {username} setUserName = {setUserName} setName = {setName}/>
       {/* <Update /> */}
    
         

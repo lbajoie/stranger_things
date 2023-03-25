@@ -3,11 +3,10 @@ import { useState } from "react";
 import { BASE_URL } from "../API";
 
 
-export default function Login({setToken}) {
+export default function Login({setToken, setName}) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');        
-    const [name, setName] = useState('')
     
     
     async function loginUser(event) {
@@ -56,7 +55,7 @@ export default function Login({setToken}) {
     
     
     function logOut() {
-        setUsername('')
+        setName('')
        setToken('');
         localStorage.removeItem('token');
     }

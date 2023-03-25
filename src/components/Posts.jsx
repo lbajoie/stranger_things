@@ -61,12 +61,15 @@ export const Posts = ({token, name}) => {
     
     <div id="posts" key={post._id}>
       <p><b><i>  Title:  </i></b>{post.title}</p>
+      <p><b><i>  Author:  </i></b>{post.author.username}</p>
+
       <p><b><i>  Description:  </i></b>{post.description}</p>
       <p><b><i>  Location:  </i></b>{post.location}</p>
       <p><b><i>  Price:   </i></b>{post.price}</p>
         <p><b><i>  Post Id:   </i></b>{post._id}</p>
+        <p><b><i>  Will Deliver:   </i></b>{post.willDeliver === true ? <span>yes</span> : <span>hell no</span> }</p>
       
-       <button hidden={  name !== post.author.username} type="submit" className="submit-btn" onClick={(event) => handleDelete(post._id)} >Delete</button>
+       <button hidden={ name !== post.author.username} type="submit" className="submit-btn" onClick={(event) => handleDelete(post._id)} >Delete</button>
       {/* div> onSubmit= {Update} <button disable={'lbajoie' !== post.author.username} type="submit" className="submit-btn" >Upddate</button></form> */}
    
  
