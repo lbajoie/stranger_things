@@ -1,6 +1,6 @@
 import { Header } from './components/Header';
 import './App.css';
-import { Delete } from './components/Delete';
+//import { Delete } from './components/Delete';
 //import { Update } from './components/Update';
 //import { Footer } from './components/Footer';
 import  {Posts}  from './components/Posts';

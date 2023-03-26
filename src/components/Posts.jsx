@@ -14,7 +14,7 @@ export const Posts = ({token, name}) => {
    
       const resp = await fetch(`${BASE_URL}posts/`);
       const data = await resp.json();
-      setPosts(data.data.posts);
+      setPosts(data.data.posts.reverse());
       //console.log('data: ', data.data.posts);
       
       }
@@ -67,7 +67,7 @@ export const Posts = ({token, name}) => {
       <p><b><i>  Location:  </i></b>{post.location}</p>
       <p><b><i>  Price:   </i></b>{post.price}</p>
         <p><b><i>  Post Id:   </i></b>{post._id}</p>
-        <p><b><i>  Will Deliver:   </i></b>{post.willDeliver === true ? <span>yes</span> : <span>hell no</span> }</p>
+        <p><b><i>  Will Deliver:   </i></b>{post.willDeliver === true ? <span>yes</span> : <span></span> }</p>
       
        <button hidden={ name !== post.author.username} type="submit" className="submit-btn" onClick={(event) => handleDelete(post._id)} >Delete</button>
       {/* div> onSubmit= {Update} <button disable={'lbajoie' !== post.author.username} type="submit" className="submit-btn" >Upddate</button></form> */}

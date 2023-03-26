@@ -31,7 +31,7 @@ const Create = ({token}) => {
            })
         }, []);
         const data = await response.json();
-        //console.log('data: ', data.user.post)
+        console.log('data: ', data.user.usrename)
     }
     return <>
   
